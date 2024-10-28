@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: #030000;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Navigation bar */
+.nav {
+    width: 200px; /* Aumenta el ancho de la barra de navegación */
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.topic {
+    font-weight: bold; /* Negrita para los temas */
+}
+
+/* Back Button */
+.back-button {
+    margin-bottom: 20px;
+}
+
+.back-button button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.back-button button:hover {
+    background-color: #555;
+}
+
+.nav ul {
+    list-style-type: none;
+}
+
+.nav ul li {
+    padding: 15px 0;
+    cursor: pointer;
+    font-size: 16px; /* Aumenta el tamaño de la fuente */
+}
+
+.nav ul li:hover {
+    background-color: #444;
+}
+
+.subtopic {
+    margin-left: 20px; /* Indentación para subtemas */
+}
+
+.hidden {
+    display: none; /* Mantiene oculto si tiene la clase hidden */
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.header input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+.content {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #010000;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.profile-info p {
+    margin: 15px 0;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #ffffff; /* Cambia el color del enlace (negro en este caso) */
+}
+
+/* Estilo para los enlaces al pasar el ratón (hover) */
+a:hover {
+    color: #4aff47; /* Cambia el color cuando el usuario pasa el ratón */
+}
+
+.flecha {
+    width: 30px;
+    cursor: pointer;
+}
+
+/* Container for the hello sections */
+.hello-container {
+    display: grid; /* Cambia a grid */
+    grid-template-columns: repeat(6, 1fr); /* 5 columnas de igual tamaño */
+    gap: 10px; /* Espaciado entre los cuadrados */
+}
+
+/* Styling for the profile section */
+.profile {
+    grid-column: span 2; /* Ocupa 1 columna en la primera fila */
+    grid-row: span 3; /* Ocupa 3 filas para aumentar su tamaño */
+    padding: 50px; /* Aumenta el padding para hacer el div más grande */
+    background-color: #000000;
+     /* Aumenta el tamaño de la fuente si deseas */
+}
+.space {
+    grid-column: span 1; /* Ocupa 1 columna en la primera fila */
+    grid-row: span 0; /* Ocupa 3 filas para aumentar su tamaño */
+    padding: 50px; /* Aumenta el padding para hacer el div más grande */
+
+}
+
+
+
+/* Styling for the hello section */
+/* Styling for the hello section */
+.hello {
+    
+    border-radius: 15px; /* Para bordes redondeados, ajusta el valor según prefieras */
+    background-color: rgb(10, 10, 10); /* Color de fondo original */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+    border: 1px solid #000000; /* Bordes para visualizar el tamaño */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+/* Cambio de color al pasar el mouse */
+.hello:hover {
+    background-color: #181717; /* Nuevo color de fondo al pasar el mouse */
+}
+
+
+/* Optional: Add some styling for images */
+.profile-pic img {
+    width: 50%;            /* Responsive images */
+    height: auto;
+    border-radius: 50%;      /* If profile picture is circular */
+}
+
+.hello-pic img {
+    width: 30%; /* Asegura que las imágenes llenen el contenedor */
+    height: auto; /* Mantiene la proporción */
+}
+.hello-pic-all img {
+    width: 100%; /* Asegura que las imágenes llenen el contenedor */
+    height: 100px; /* Mantiene la proporción */
+}
+.hello-pic-shield img {
+    width: 50%; /* Asegura que las imágenes llenen el contenedor */
+    height: 100px; /* Mantiene la proporción */
+}
+/* Ensuring the main container looks good on different screen sizes */
+@media (max-width: 768px) {
+    .hello-container {
+        grid-template-columns: 1fr; /* Stacks the sections on smaller screens */
+    }
+}
